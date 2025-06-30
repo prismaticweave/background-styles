@@ -20,7 +20,7 @@ html, body {
 }
 
 /* Animated top layer (currently disabled) */
-.overlay-layer {
+/* .overlay-layer {
   position: absolute;
   inset: 0;
   background: radial-gradient(circle at 50% 50%, #d9c4ff, #c2c6ff, #a2e6ff, #ffdae9, #eec1ff);
@@ -30,7 +30,7 @@ html, body {
   mix-blend-mode: lighten;
   background-size: 150% 150%;
   background-position: center;
-}
+}*/
 
 /* Animations */
 @keyframes move {
