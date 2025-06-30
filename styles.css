@@ -12,7 +12,7 @@ html, body {
   overflow-y: auto;
   position: relative;
   font-family: 'Squarish', sans-serif;
-  color: #000;
+  color: #FFFFFF;
 }
 
 /* Background gradient layer */
@@ -42,13 +42,13 @@ html, body {
   font-size: 7.5rem;
   letter-spacing: 0.05em;
   margin-bottom: 1rem;
-  color: #000;
+  color: #FFFFFF;
 }
 
 .tagline {
   font-weight: 400;
   font-size: 1.2rem;
-  color: #000;
+  color: #FFFFFF;
   margin-bottom: 2rem;
 }
 
