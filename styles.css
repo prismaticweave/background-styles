@@ -4,40 +4,65 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 html, body {
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   position: relative;
+  font-family: 'Squarish', sans-serif;
+  color: #000;
 }
 
-/* Static base gradient */
+/* Background gradient layer */
 .gradient-layer {
-  position: absolute;
-  inset: 0;
+  position: fixed;
+  inset: 0; /* top:0; right:0; bottom:0; left:0; */
   z-index: 0;
   background: linear-gradient(225deg, #4cc9f0, #4361ee, #3a0ca3, #2e003e);
 }
 
-/* Animated top layer (currently disabled) */
-/* .overlay-layer {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 50% 50%, #d9c4ff, #c2c6ff, #a2e6ff, #ffdae9, #eec1ff);
-  animation: move 10s ease-in-out infinite alternate;
-  opacity: 0.25;
-  z-index: 1;
-  mix-blend-mode: lighten;
-  background-size: 150% 150%;
-  background-position: center;
-}*/
+/* Content container */
+.content {
+  position: relative;
+  z-index: 1; /* Above background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+}
 
-/* Animations */
-@keyframes move {
-  0% {
-    transform: scale(1) translate(0%, 0%);
-  }
-  100% {
-    transform: scale(2) translate(-20%, 20%);
-  }
+/* Titles and buttons */
+.title {
+  font-family: 'ZenLoop', 'Spline Sans Mono', monospace;
+  font-size: 7.5rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+.tagline {
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #000;
+  margin-bottom: 2rem;
+}
+
+.cta {
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(to right, #D3CCE3, #E9E4F0);
+  color: #292E49;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  transition: border-color 0.3s ease;
+}
+
+.cta:hover {
+  border-color: #E9E4F0;
 }
