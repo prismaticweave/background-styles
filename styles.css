@@ -1,10 +1,33 @@
-/* Reset */
+/* ========== FONT SETUP ========== */
+@font-face {
+  font-family: 'ZenLoop';
+  src: url('assets/fonts/ZenLoop-Regular.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Squarish';
+  src: url('assets/fonts/ZF2334Squarish-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Squarish';
+  src: url('assets/fonts/ZF2334Squarish-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* ========== RESET ========== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ========== GLOBAL LAYOUT ========== */
 html, body {
   height: 100%;
   width: 100%;
@@ -13,56 +36,35 @@ html, body {
   position: relative;
   font-family: 'Squarish', sans-serif;
   color: #FFFFFF;
+  background: black; /* fallback */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.page-wrapper {
+  flex: 1;
 }
 
-/* Background gradient layer */
+/* ========== UNIVERSAL BACKGROUND GRADIENT ========== */
 .gradient-layer {
   position: fixed;
-  inset: 0; /* top:0; right:0; bottom:0; left:0; */
+  inset: 0;
   z-index: 0;
   background: linear-gradient(225deg, #4cc9f0, #4361ee, #3a0ca3, #2e003e);
 }
-
-/* Content container */
-.content {
+body > *:not(.gradient-layer) {
   position: relative;
-  z-index: 1; /* Above background */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 2rem;
+  z-index: 1;
+}
+
+/* ========== SHARED FOOTER ========== */
+.sticky-footer {
+  margin-top: auto;
   text-align: center;
-}
-
-/* Titles and buttons */
-.title {
-  font-family: 'ZenLoop', 'Spline Sans Mono', monospace;
-  font-size: 7.5rem;
-  letter-spacing: 0.05em;
-  margin-bottom: 1rem;
+  padding: 1rem;
+  font-family: 'Squarish', sans-serif;
+  font-size: 0.9rem;
   color: #FFFFFF;
-}
-
-.tagline {
-  font-weight: 400;
-  font-size: 1.2rem;
-  color: #FFFFFF;
-  margin-bottom: 2rem;
-}
-
-.cta {
-  font-weight: 700;
-  padding: 0.75rem 1.5rem;
-  background: linear-gradient(to right, #D3CCE3, #E9E4F0);
-  color: #292E49;
-  text-decoration: none;
-  border: 2px solid transparent;
-  border-radius: 999px;
-  transition: border-color 0.3s ease;
-}
-
-.cta:hover {
-  border-color: #E9E4F0;
+  background: transparent;
+  z-index: 2;
 }
