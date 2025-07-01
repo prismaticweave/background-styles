@@ -31,6 +31,7 @@
   min-height: 100vh;
   padding: 2rem;
   text-align: center;
+  font-family: 'Squarish', 'Inter', sans-serif;
 }
 
 /* ========== LANDING PAGE TITLE ========== */
@@ -59,11 +60,14 @@
   text-decoration: none;
   border: 2px solid transparent;
   border-radius: 999px;
-  transition: border-color 0.3s ease;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 0 rgba(255, 255, 255, 0);
 }
 
 .cta:hover {
   border-color: #E9E4F0;
+  transform: scale(1.03);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
 }
 
 /* ========== LANDING FOOTER (OPTIONAL OVERRIDES) ========== */
