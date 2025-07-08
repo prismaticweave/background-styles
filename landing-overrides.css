@@ -5,21 +5,18 @@
   font-weight: 300;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'Squarish';
   src: url('/assets/fonts/ZF2334Squarish-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'Squarish';
   src: url('/assets/fonts/ZF2334Squarish-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
 }
-
 /* ========== LANDING PAGE LAYOUT ========== */
 .content {
   position: relative;
@@ -32,10 +29,7 @@
   padding: 2rem;
   text-align: center;
   font-family: 'Squarish', 'Inter', sans-serif;
-  position: relative;
-  z-index: 1;
 }
-
 /* ========== LANDING PAGE TITLE ========== */
 .title {
   font-family: 'ZenLoop', 'Spline Sans Mono', monospace;
@@ -46,7 +40,6 @@
   animation: slowFloat 8s ease-in-out infinite;
   z-index: 1;
 }
-
 /* ========== TAGLINE ========== */
 .tagline {
   font-weight: 400;
@@ -57,7 +50,6 @@
   transform: translateY(16px);
   animation: fadeInRise 1.8s ease-out 0.6s forwards;
 }
-
 /* ========== CALL TO ACTION BUTTON ========== */
 .cta {
   font-weight: 700;
@@ -71,23 +63,21 @@
   box-shadow: 0 0 0 rgba(255, 255, 255, 0);
   animation: pulseGlow 2.5s ease-in-out 1.8s 2;
 }
-
 .cta:hover {
   border-color: #E9E4F0;
   transform: scale(1.03);
   box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
 }
-
 /* ========== BASE BACKGROUND ========== */
 body {
-  background-image: url('/assets/images/background.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: url('/assets/images/background.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
 }
-
 /* ========== BACKGROUND SHIMMER ========== */
-/*body::before {
+body::before {
   content: "";
   position: fixed;
   top: 0; left: 0;
@@ -97,34 +87,28 @@ body {
   pointer-events: none;
   z-index: 0;
   animation: ambientDrift 30s ease-in-out infinite;
-} */
-
+}
 /* ========== ANIMATION KEYFRAMES ========== */
-
-/* @keyframes ambientDrift {
+@keyframes ambientDrift {
   0%   { transform: translate(0, 0) scale(1); }
   50%  { transform: translate(-3%, 2%) scale(1.02); }
   100% { transform: translate(0, 0) scale(1); }
 }
-
 @keyframes slowFloat {
   0%, 100% { transform: translateY(0); }
   50%      { transform: translateY(-8px); }
 }
-
 @keyframes fadeInRise {
   to {
     opacity: 1;
     transform: translateY(0);
   }
-} 
-
+}
 @keyframes pulseGlow {
   0%   { box-shadow: 0 0 0 rgba(255,255,255,0); transform: scale(1); }
   50%  { box-shadow: 0 0 12px rgba(255,255,255,0.15); transform: scale(1.03); }
   100% { box-shadow: 0 0 0 rgba(255,255,255,0); transform: scale(1); }
-} */
-
+}
 /* ========== LANDING FOOTER (OPTIONAL OVERRIDES) ========== */
 /* .sticky-footer { */
   /* Optional: any landing-specific footer changes */
