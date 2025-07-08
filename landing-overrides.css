@@ -76,6 +76,14 @@
   box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
 }
 
+/* ========== BASE BACKGROUND ========== */
+body {
+  background-color: rgb(34, 39, 42); /* Fallback color */
+  background-image: url('/assets/images/background.jpg'); /* Main background */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 /* ========== BACKGROUND SHIMMER ========== */
 body::before {
   content: "";
