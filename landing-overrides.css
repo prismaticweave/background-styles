@@ -46,7 +46,10 @@
     0 0 20px #D3CCE3,
     0 0 35px #D3CCE3,
     0 0 40px #E9E4F0;
-  animation: fadeInRight 1s ease-out 0.5s forwards;
+  /* Initial state - hidden */
+  opacity: 0;
+  /* Reveal animation */
+  animation: titleReveal 2s ease-out forwards, slowFloat 8s ease-in-out infinite 2s, titleGlow 3s ease-in-out infinite alternate 2s;
 }
 /* ========== TAGLINE ========== */
 .tagline {
@@ -55,8 +58,7 @@
   color: #FFFFFF;
   margin-bottom: 2rem;
   opacity: 0;
-  transform: translateY(16px);
-  animation: fadeIn 1.8s ease-out 0.5s forwards;
+  animation: fadeInSubtle 1.5s ease-out 2.5s forwards;
 }
 /* ========== CALL TO ACTION BUTTON ========== */
 .cta {
@@ -69,7 +71,10 @@
   border-radius: 999px;
   transition: all 0.4s ease;
   box-shadow: 0 0 0 rgba(255, 255, 255, 0);
-  animation: pulseGlow 2.5s ease-in-out 1.8s 2;
+  /* Initial state - hidden */
+  opacity: 0;
+  /* Sequential reveal after tagline */
+  animation: fadeInSubtle 1.5s ease-out 4.5s forwards, pulseGlow 2.5s ease-in-out 6s 2;
 }
 .cta:hover {
   border-color: #E9E4F0;
@@ -85,6 +90,44 @@ body {
   background-attachment: scroll !important;
 }
 /* ========== ANIMATION KEYFRAMES ========== */
+@keyframes titleReveal {
+  0% {
+    opacity: 0;
+    clip-path: inset(0 100% 0 0);
+  }
+  100% {
+    opacity: 1;
+    clip-path: inset(0 0% 0 0);
+  }
+}
+@keyframes fadeInSubtle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes titleGlow {
+  0% {
+    text-shadow: 
+      0 0 5px #FFFFFF,
+      0 0 10px #FFFFFF,
+      0 0 15px #D3CCE3,
+      0 0 20px #D3CCE3,
+      0 0 35px #D3CCE3,
+      0 0 40px #E9E4F0;
+  }
+  100% {
+    text-shadow: 
+      0 0 8px #FFFFFF,
+      0 0 15px #FFFFFF,
+      0 0 25px #D3CCE3,
+      0 0 35px #D3CCE3,
+      0 0 50px #D3CCE3,
+      0 0 60px #E9E4F0;
+  }
+}
 @keyframes slowFloat {
   0%, 100% { transform: translateY(0); }
   50%      { transform: translateY(-8px); }
