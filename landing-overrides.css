@@ -41,6 +41,8 @@
   letter-spacing: 0.05em;
   margin-bottom: 1rem;
   color: #FFFFFF;
+  animation: slowFloat 8s ease-in-out infinite;
+  z-index: 1;
 }
 
 /* ========== TAGLINE ========== */
@@ -49,6 +51,9 @@
   font-size: 1.2rem;
   color: #FFFFFF;
   margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(16px);
+  animation: fadeInRise 1.8s ease-out 0.6s forwards;
 }
 
 /* ========== CALL TO ACTION BUTTON ========== */
@@ -62,12 +67,52 @@
   border-radius: 999px;
   transition: all 0.4s ease;
   box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  animation: pulseGlow 2.5s ease-in-out 1.8s 2;
 }
 
 .cta:hover {
   border-color: #E9E4F0;
   transform: scale(1.03);
   box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+}
+
+/* ========== BACKGROUND SHIMMER ========== */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at 40% 40%, rgba(255,255,255,0.04), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+  animation: ambientDrift 30s ease-in-out infinite;
+}
+
+/* ========== ANIMATION KEYFRAMES ========== */
+
+@keyframes ambientDrift {
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(-3%, 2%) scale(1.02); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+@keyframes slowFloat {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+
+@keyframes fadeInRise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0%   { box-shadow: 0 0 0 rgba(255,255,255,0); transform: scale(1); }
+  50%  { box-shadow: 0 0 12px rgba(255,255,255,0.15); transform: scale(1.03); }
+  100% { box-shadow: 0 0 0 rgba(255,255,255,0); transform: scale(1); }
 }
 
 /* ========== LANDING FOOTER (OPTIONAL OVERRIDES) ========== */
