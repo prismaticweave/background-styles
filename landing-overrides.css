@@ -80,7 +80,7 @@
 
 /* ========== BASE BACKGROUND ========== */
 body {
-  background: rgb(34, 39, 42) url('/assets/images/background.jpg') no-repeat center center / cover;
+  background-image: url('/assets/images/background.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
