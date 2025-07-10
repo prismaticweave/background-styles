@@ -17,6 +17,13 @@
   font-weight: 700;
   font-style: normal;
 }
+
+/* ========== LANDING PAGE BACKGROUND FIX ========== */
+body {
+  background: url('https://raw.githubusercontent.com/prismaticweave/prismaticweave/main/assets/images/background.jpg')
+              center center / cover no-repeat scroll !important;
+}
+
 /* ========== LANDING PAGE LAYOUT ========== */
 .content {
   position: relative;
@@ -30,6 +37,7 @@
   text-align: center;
   font-family: 'Squarish', 'Inter', sans-serif;
 }
+
 /* ========== LANDING PAGE TITLE ========== */
 .title {
   font-family: 'ZenLoop', 'Spline Sans Mono', monospace;
@@ -37,7 +45,9 @@
   letter-spacing: 0.05em;
   margin-bottom: 1rem;
   color: #FFFFFF;
-  animation: slowFloat 8s ease-in-out infinite, titleGlow 4s ease-in-out infinite alternate;
+  animation: titleReveal 2s ease-out forwards,
+             slowFloat 8s ease-in-out infinite 2s,
+             titleGlow 3s ease-in-out infinite alternate 2s;
   z-index: 1;
   text-shadow: 
     0 0 5px #FFFFFF,
@@ -46,11 +56,9 @@
     0 0 20px #D3CCE3,
     0 0 35px #D3CCE3,
     0 0 40px #E9E4F0;
-  /* Initial state - hidden */
   opacity: 0;
-  /* Reveal animation */
-  animation: titleReveal 2s ease-out forwards, slowFloat 8s ease-in-out infinite 2s, titleGlow 3s ease-in-out infinite alternate 2s;
 }
+
 /* ========== TAGLINE ========== */
 .tagline {
   font-weight: 400;
@@ -60,6 +68,7 @@
   opacity: 0;
   animation: fadeInSubtle 1.5s ease-out 2.5s forwards;
 }
+
 /* ========== CALL TO ACTION BUTTON ========== */
 .cta {
   font-weight: 700;
@@ -71,24 +80,16 @@
   border-radius: 999px;
   transition: all 0.4s ease;
   box-shadow: 0 0 0 rgba(255, 255, 255, 0);
-  /* Initial state - hidden */
   opacity: 0;
-  /* Sequential reveal after tagline */
-  animation: fadeInSubtle 1.5s ease-out 4.5s forwards, pulseGlow 2.5s ease-in-out 6s 2;
+  animation: fadeInSubtle 1.5s ease-out 4.5s forwards,
+             pulseGlow 2.5s ease-in-out 6s 2;
 }
 .cta:hover {
   border-color: #E9E4F0;
   transform: scale(1.03);
   box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
 }
-/* ========== BASE BACKGROUND ========== */
-  body {
-  background-image: url('https://raw.githubusercontent.com/prismaticweave/prismaticweave/main/assets/images/background.jpg');
-  background-size: cover !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  background-attachment: scroll !important;
-}
+
 /* ========== ANIMATION KEYFRAMES ========== */
 @keyframes titleReveal {
   0% {
@@ -100,6 +101,7 @@
     clip-path: inset(0 0% 0 0);
   }
 }
+
 @keyframes fadeInSubtle {
   0% {
     opacity: 0;
@@ -108,6 +110,7 @@
     opacity: 1;
   }
 }
+
 @keyframes titleGlow {
   0% {
     text-shadow: 
@@ -128,16 +131,12 @@
       0 0 60px #E9E4F0;
   }
 }
+
 @keyframes slowFloat {
   0%, 100% { transform: translateY(0); }
   50%      { transform: translateY(-8px); }
 }
-@keyframes fadeInRise {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+
 @keyframes pulseGlow {
   0%   { box-shadow: 0 0 0 rgba(255,255,255,0); transform: scale(1); }
   50%  { box-shadow: 0 0 12px rgba(255,255,255,0.15); transform: scale(1.03); }
