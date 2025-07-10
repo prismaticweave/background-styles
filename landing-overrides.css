@@ -37,7 +37,7 @@
   letter-spacing: 0.05em;
   margin-bottom: 1rem;
   color: #FFFFFF;
-  animation: slowFloat 8s ease-in-out infinite, titleGlow 3s ease-in-out infinite alternate;
+  animation: slowFloat 8s ease-in-out infinite, titleGlow 4s ease-in-out infinite alternate;
   z-index: 1;
   text-shadow: 
     0 0 5px #FFFFFF,
@@ -83,7 +83,8 @@
 }
 /* ========== BASE BACKGROUND ========== */
 body {
-  background-image: url('/assets/images/background.jpg') !important;
+  body {
+  background-image: url('https://prismaticweave.studio/assets/images/background.jpg') !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
