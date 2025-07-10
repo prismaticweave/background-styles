@@ -82,9 +82,8 @@
   box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
 }
 /* ========== BASE BACKGROUND ========== */
-body {
   body {
-  background-image: url('github.com/prismaticweave/assets/images/background.jpg') !important;
+  background-image: url('https://raw.githubusercontent.com/prismaticweave/prismaticweave/main/assets/images/background.jpg');
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
