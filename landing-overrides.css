@@ -49,10 +49,14 @@ body {
 
 /* ========== SUMMARY SECTION ========== */
 #summary {
-  margin: 2rem 0;
+  max-width: 700px;
+  margin: 2rem auto;
+  font-family: 'Squarish', 'Inter', sans-serif;
   font-size: 1.1rem;
   line-height: 1.4;
   color: #FFFFFF;
+  opacity: 0;
+  animation: fadeInSubtle 1.5s ease-out 3.5s forwards;
 }
 
 /* ========== LANDING PAGE TITLE ========== */
