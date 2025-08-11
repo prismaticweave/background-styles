@@ -38,6 +38,23 @@ body {
   font-family: 'Squarish', 'Inter', sans-serif;
 }
 
+/* ========== PAGE WRAPPER (for hub/summary pages) ========== */
+.page-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-family: 'Squarish', 'Inter', sans-serif;
+}
+
+/* ========== SUMMARY SECTION ========== */
+#summary {
+  margin: 2rem 0;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  color: #FFFFFF;
+}
+
 /* ========== LANDING PAGE TITLE ========== */
 .title {
   font-family: 'ZenLoop', 'Spline Sans Mono', monospace;
