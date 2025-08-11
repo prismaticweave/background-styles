@@ -38,12 +38,6 @@ body {
   font-family: 'Squarish', 'Inter', sans-serif;
 }
 
-/* ========== SUMMARY SECTION ========== */
-.summary {
-  opacity: 0;
-  animation: fadeInSubtle 1.5s ease-out 3.5s forwards;
-}
-
 /* ========== LANDING PAGE TITLE ========== */
 .title {
   font-family: 'ZenLoop', 'Spline Sans Mono', monospace;
@@ -136,11 +130,6 @@ body {
       0 0 50px #D3CCE3,
       0 0 60px #E9E4F0;
   }
-}
-
-@keyframes slowFloat {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-8px); }
 }
 
 @keyframes pulseGlow {
