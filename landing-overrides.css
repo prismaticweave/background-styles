@@ -17,11 +17,22 @@
   font-weight: 700;
   font-style: normal;
 }
+
 /* ========== LANDING PAGE BACKGROUND FIX ========== */
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 body {
   background: url('https://raw.githubusercontent.com/prismaticweave/prismaticweave/main/assets/images/background.jpg')
               center center / cover no-repeat scroll !important;
+  min-width: 100vw;
+  min-height: 100vh;
 }
+
 /* ========== LANDING PAGE LAYOUT ========== */
 .content {
   position: relative;
@@ -35,6 +46,7 @@ body {
   text-align: center;
   font-family: 'Squarish', 'Inter', sans-serif;
 }
+
 /* ========== LANDING PAGE TITLE ========== */
 .title {
   font-family: 'ZenLoop', 'Spline Sans Mono', monospace;
@@ -53,6 +65,7 @@ body {
     0 0 18px #D3CCE3;
   opacity: 0;
 }
+
 /* ========== TAGLINE ========== */
 .tagline {
   font-weight: 400;
@@ -62,10 +75,11 @@ body {
   opacity: 0;
   animation: fadeInSubtle 1.5s ease-out 2.5s forwards;
 }
+
 /* ========== ADDITIONAL TEXT CONTENT ========== */
 .additional-text {
   font-weight: 400;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: #FFFFFF;
   margin-bottom: 2rem;
   opacity: 0;
@@ -73,6 +87,7 @@ body {
   max-width: 600px;
   line-height: 1.6;
 }
+
 /* ========== CALL TO ACTION BUTTON ========== */
 .cta {
   font-weight: 700;
@@ -93,6 +108,7 @@ body {
   transform: scale(1.03);
   box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
 }
+
 /* ========== ANIMATION KEYFRAMES ========== */
 @keyframes titleReveal {
   0% {
@@ -104,6 +120,7 @@ body {
     clip-path: inset(0 0% 0 0);
   }
 }
+
 @keyframes fadeInSubtle {
   0% {
     opacity: 0;
@@ -112,6 +129,7 @@ body {
     opacity: 1;
   }
 }
+
 @keyframes titleGlow {
   0% {
     text-shadow: 
@@ -130,8 +148,51 @@ body {
       0 0 25px #D3CCE3;
   }
 }
+
 @keyframes pulseGlow {
   0%   { box-shadow: 0 0 0 rgba(255,255,255,0); transform: scale(1); }
   50%  { box-shadow: 0 0 12px rgba(255,255,255,0.15); transform: scale(1.03); }
   100% { box-shadow: 0 0 0 rgba(255,255,255,0); transform: scale(1); }
+}
+
+/* ========== MOBILE RESPONSIVENESS ========== */
+@media (max-width: 768px) {
+  .title {
+    font-size: 3.5rem;
+    letter-spacing: 0.02em;
+    margin: 1rem 0 0.5rem 0;
+  }
+  
+  .tagline {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .additional-text {
+    font-size: 1rem;
+    max-width: 90%;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+  
+  .content {
+    padding: 1rem;
+  }
+  
+  .cta {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    min-height: 44px;
+  }
+}
+
+/* ========== VERY SMALL PHONES ========== */
+@media (max-width: 480px) {
+  .title {
+    font-size: 2.8rem;
+  }
+  
+  .additional-text {
+    font-size: 0.95rem;
+  }
 }
